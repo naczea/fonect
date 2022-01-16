@@ -4,13 +4,20 @@ import team from "../img/nosotros.svg";
 import Zoom2 from "react-reveal/Zoom";
 import { Button } from "@material-ui/core";
 import { HashLink as Link } from "react-router-hash-link";
-
 import { CloudDownload } from "@material-ui/icons";
+import ModalLogin from './ModalLogin';
 
-class Nosotros extends Component {
-  render() {
+//const [open, ]
+export default function Nosotros () {
+
+    const [openModal, setOpenModal] = React.useState(false);
+
+    const openForm = () => {
+      setOpenModal((prev) => !prev);
+    }
+    
     return (
-      <div className="nosotros" id={this.props.id}>
+      <div className="nosotros" id="nosotros">
         <Grid
           container
           direction="row"
@@ -52,8 +59,7 @@ class Nosotros extends Component {
                 color="primary"
                 disableElevation
                 className="btntime"
-                component={Link}
-                to="/services"
+                onClick={() => openForm()}
               >
                 <CloudDownload
                   style={{
@@ -66,10 +72,7 @@ class Nosotros extends Component {
               </Button>
           </Grid>
         </Grid>
-
+        <ModalLogin isOpen={openModal}/>
       </div>
     );
   }
-}
-
-export default Nosotros;

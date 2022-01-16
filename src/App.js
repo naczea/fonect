@@ -6,6 +6,7 @@ import Main from "./containers/Main";
 import Services from "./containers/Services";
 import Clients from "./containers/Clients";
 import Service from "./containers/Service";
+import Demo from "./containers/Demo";
 import "./App.scss";
 
 const myColors = createMuiTheme({
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/services" component={Services} />
           <Route exact path="/services/:name" component={Service} />
           <Route exact path="/clients" component={Clients} />
+          <Route exact path="/demo" component={Demo} />
           <Redirect to="/" />
         </Switch>
       </ThemeProvider>
