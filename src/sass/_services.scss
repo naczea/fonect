@@ -1,0 +1,166 @@
+/*  SERVICES  */
+
+$blue1: #325c8a;
+$blue2: #316091;
+$yellow1: #fdbf14;
+
+:root {
+  --serv_cont-height: 100vh;
+  --serv_cont-margleft: 150px;
+  --serv_cont-padtop: 2%;
+  /*---------------*/
+  --serv_slider-height: 65vh;
+  --serv_button-height: 5vh;
+  --serv_h2-size: 30px;
+  --serv_p-size: 14px;
+  --serv_itempad: 4%;
+  /*---------------*/
+  --serv_illus-height: 18vh;
+  --serv_illus-width: 42.5%;
+  --serv_illus-size: 35px;
+}
+
+.services {
+  height: var(--serv_cont-height) !important;
+  margin-left: var(--serv_cont-margleft);
+  padding-top: var(--serv_cont-padtop);
+  background: #e1ebf6;
+  .serviceSlider {
+    height: var(--serv_slider-height);
+  }
+  .serviceButton {
+    height: var(--serv_button-height);
+    margin-top: 1.5%;
+  }
+}
+.serviceIllus {
+  width: var(--serv_illus-width);
+  height: var(--serv_illus-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: white;
+    font-size: var(--serv_illus-size);
+    text-transform: uppercase;
+    background-color: #5437e2;
+    padding: 18px 45px;
+    border-radius: 45px;
+    box-shadow: 0 10px 20px rgba( #5437e2, $alpha: 0.8) !important;
+  }
+}
+.serviceCont {
+  height: 70vh !important;
+  padding: var(--serv_itempad) !important;
+  margin: 0 !important;
+  h2 {
+    color: #5437e2;
+    font-size: var(--serv_h2-size);
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+  p {
+    width: 95%;
+    text-align: justify;
+    color: black;
+    font-size: var(--serv_p-size);
+  }
+  .imgService {
+    height: 26vh;
+    cursor: pointer;
+    margin-bottom: 2%;
+  }
+}
+
+.service {
+  margin-left: 150px;
+}
+
+/*  MEDIAS  */
+
+:root {
+  @media all and (min-width: 1200px) and (max-width: 1500px) {
+    --serv_cont-padtop: 0px;
+    /*---------------*/
+    --serv_slider-height: auto;
+    --serv_button-height: auto;
+    --serv_h2-size: 25px;
+    --serv_p-size: 12.5px;
+    /*---------------*/
+    --serv_illus-height: 20vh;
+    --serv_illus-width: 45%;
+    --serv_illus-size: 28px;
+  }
+  @media all and (min-width: 960px) and (max-width: 1200px) {
+    --serv_cont-padtop: 0px;
+    /*---------------*/
+    --serv_slider-height: auto;
+    --serv_button-height: auto;
+    --serv_h2-size: 25px;
+    --serv_p-size: 12px;
+    /*---------------*/
+    --serv_illus-height: 20vh;
+    --serv_illus-width: 52.5%;
+    --serv_illus-size: 32px;
+  }
+  @media all and (min-width: 768px) and (max-width: 960px) {
+    --serv_cont-padtop: 0px;
+    /*---------------*/
+    --serv_slider-height: auto;
+    --serv_button-height: auto;
+    --serv_h2-size: 20px;
+    --serv_p-size: 11px;
+    /*---------------*/
+    --serv_illus-height: 18vh;
+    --serv_illus-width: 58%;
+    --serv_illus-size: 28px;
+  }
+  @media all and (min-width: 600px) and (max-width: 768px) {
+    --serv_cont-height: auto !important;
+    --serv_cont-margleft: unset;
+    --serv_cont-padtop: 56px;
+    /*---------------*/
+    --serv_slider-height: auto;
+    --serv_button-height: auto;
+    --serv_h2-size: 18px;
+    --serv_p-size: 12px;
+    /*---------------*/
+    --serv_illus-height: 15vh;
+    --serv_illus-width: 50%;
+    --serv_illus-size: 22.5px;
+    .service {
+      margin-left: unset;
+      margin-bottom: 65px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    --serv_cont-height: auto !important;
+    --serv_cont-margleft: unset;
+    --serv_cont-padtop: 40px;
+    /*---------------*/
+    --serv_slider-height: auto;
+    --serv_button-height: auto;
+    --serv_h2-size: 22px;
+    --serv_p-size: 13px;
+    --serv_itempad: 12%;
+    /*---------------*/
+    --serv_illus-height: 13vh;
+    --serv_illus-width: 95%;
+    --serv_illus-size: 18px;
+    .service {
+      margin-left: unset;
+      margin-bottom: 65px;
+    }
+    .serviceButton {
+      margin-bottom: 8%;
+    }
+    .serviceIllus {
+      h1 {
+        padding: 10px 30px;
+        border-radius: 45px;
+        box-shadow: 0 10px 20px rgba(#dca718, $alpha: 0.6) !important;
+      }
+    }
+  }
+}

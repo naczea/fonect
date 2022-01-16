@@ -1,0 +1,158 @@
+@import "sass/header";
+@import "sass/services";
+@import "sass/nosotros";
+@import "sass/footer";
+@import "sass/client";
+@import "sass/contact";
+@import "sass/clientsRoutes";
+@import "sass/headerServices";
+@import "sass/mainServices";
+
+$blue1: #325c8a;
+$blue2: #316091;
+$yellow1: #fdbf14;
+
+* {
+  font-family: "Asap", sans-serif;
+}
+.headerCont {
+  width: 100% !important;
+  height: 100vh !important;
+}
+.btntime{
+  border-radius: 20px!important;
+  border: 2px solid #5437e2;
+  padding: 10px 20px!important;
+  margin-top: 5%;
+}
+.btntime2{
+  border-radius: 20px!important;
+  border: 2px solid white !important;
+  padding: 10px 20px!important;
+  margin-top: 5%;
+  color: white !important;
+}
+
+.tooltip_subir{
+  background-color: rgba($color: #2f2e2e, $alpha: 0.5)!important;
+  border-radius: 0!important;
+  padding: 0!important;
+}
+/*    DRAWER    */
+
+.drawer {
+  width: 100% !important;
+  height: 100vh !important;
+  background-color: #5437e2;
+  .nets {
+    padding: 9px;
+    color: #5437e2;
+    background-color: #e1ebf6;
+  }
+  .nets:hover {
+    padding: 10px;
+    transition: 0.2s;
+    background-color: #e1ebf6;
+  }
+}
+
+.logocont {
+  width: 80% !important;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-left: 8%;
+}
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  width: 70%;
+  height: 0.8px;
+  background-color: white;
+  margin-left: 12%;
+}
+.aList {
+  text-decoration: none !important;
+  color: unset;
+}
+
+.listDrawer span {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bolder;
+  color: white;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.divisor {
+  width: 100%;
+  height: 5vh;
+}
+
+/*    Plans  */
+.titlePlans{
+  font-family: "Asap", sans-serif!important;
+  font-size: 70px!important;
+}
+.descriptionPlans{
+  font-family: "Asap", sans-serif!important;
+  font-size: 19px!important;
+}
+
+/*    Effects  */
+html {
+  scroll-behavior: smooth;
+}
+.MuiButton-containedPrimary .MuiButton-label {
+  color: #ffffff !important;
+}
+
+/*    Media Query   */
+
+
+.NavPhone {
+  display: none !important;
+}
+.imgNavPhone {
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgNavPhone img {
+  width: 49px;
+  height: 49px;
+}
+.MuiBottomNavigationAction-label {
+  color: #ffffff !important;
+}
+.MuiDrawer-paperAnchorDockedLeft {
+  border-right: unset !important;
+}
+.appBar {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  
+  /*    DRAWER    */
+  .makeStyles-drawerPaper-4 {
+    display: none !important;
+  }
+  .MuiDrawer-paperAnchorDockedLeft {
+    display: none !important;
+  }
+
+  /*    NAVPHONE    */
+
+  .NavPhone {
+    display: flex !important;
+    border-bottom: 1.5px solid #cccccc;
+  }
+  .appBar {
+    display: flex !important;
+  }
+}

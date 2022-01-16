@@ -1,0 +1,112 @@
+/*  NOSOTROS  */
+
+$blue1: #325C8A;
+$blue2: #316091;
+$yellow1: #fdbf14;
+
+:root {
+  --nos_cont-height: 80vh;
+  --nos_cont-margleft: 150px;
+  --nos_cont-padtop: 0%;
+  /*---------------*/
+  --nos_illus-width: 78%;
+  /*---------------*/
+  --nos_textpad: 2%;
+  --nos_h1size: 30px;
+  --nos_psize: 15px;
+  --nos_ppad: 8%;
+  --nos_bott: 5%;
+}
+
+.nosotros {
+  height: var(--nos_cont-height) !important;
+  margin-left: var(--nos_cont-margleft);
+  padding-top: var(--nos_cont-padtop);
+  background: #e1ebf6;
+  .nosCont{
+    height: 80vh!important;
+    .nosIllus {
+      img {
+        width: var(--nos_illus-width);
+      }
+    }
+    .nosText {
+      padding: var(--nos_textpad);
+      padding-right: 6%;
+      h1 {
+        color: $blue1;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: var(--nos_h1size);
+        font-weight: bold;
+        margin-bottom: var(--nos_bott);
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #5437e2;
+        padding: 13px 30px;
+        border-radius: 45px;
+        box-shadow: 0 10px 22px rgba($blue1, $alpha: .7)!important;
+        font-size: 20px!important;
+      }
+      p {
+        font-size: var(--nos_psize);
+        text-align: justify;
+        padding: var(--nos_ppad);
+        margin-bottom: var(--nos_bott);
+        color: #5437e2;
+      }
+    }
+  }
+}
+
+/*  MEDIAS  */
+
+:root {
+  @media all and (min-width: 960px) and (max-width: 1200px) {
+    --nos_illus-width: 95%;
+    /*---------------*/
+    --nos_h1size: 28px;
+    --nos_psize: 13px;
+  }
+  @media all and (min-width: 768px) and (max-width: 960px) {
+    --nos_illus-width: 95%;
+    /*---------------*/
+    --nos_textpad: 3%;
+    --nos_h1size: 27px;
+    --nos_psize: 12px;
+    --nos_ppad: 8%;
+  }
+  @media all and (min-width: 600px) and (max-width: 768px) {
+    --nos_cont-height: auto;
+    --nos_cont-margleft: unset;
+    /*---------------*/
+    --nos_h1size: 26px;
+    --nos_psize: 12px;
+    --nos_ppad: 10%;
+  }
+  @media only screen and (max-width: 600px) {
+    --nos_cont-height: auto !important;
+    --nos_cont-margleft: unset;
+    /*---------------*/
+    --nos_illus-width: 80%;
+    /*---------------*/
+    --nos_textpad: 4%;
+    --nos_psize: 12px;
+    --nos_ppad: 10%;
+    --nos_bott: 0%;
+    --nos_h1size: 10px!important;
+    .nosIllus{
+      margin-top: 8%;
+      margin-bottom: 2%;
+    }
+    .marquee{
+      height: 15vh;
+      margin-bottom: 5%;
+    }
+    #h1nosotros{
+      font-size: 12px!important;
+    }
+  }
+}
+

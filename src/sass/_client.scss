@@ -1,0 +1,436 @@
+/* CLIENTS */
+
+$blue1: #325c8a;
+$blue2: #316091;
+$yellow1: #fdbf14;
+
+:root {
+  --marquee-width: 100%;
+  --marquee-height: 20vh;
+  /* --marquee-elements: 12; */ /* defined with JavaScript */
+  --marquee-elements-displayed: 7;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  color: $blue1;
+  overflow: hidden;
+  position: relative;
+}
+.marquee:before, .marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.marquee:before {
+  left: 0;
+}
+.marquee:after {
+  right: 0;
+}
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+  white-space: nowrap;
+}
+
+.marquee-content li img {
+  width: 100%;
+  /* height: 100%; */
+  border: 2px solid #eee;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 12px; }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+  .marquee:before, .marquee:after { width: 5rem; }
+}
+
+.rec.rec-arrow {
+  border-radius: 50%;
+  background-color: #e6b52f;
+  color: #ffffff;
+  box-shadow: 0 0 2px 0 #333;
+}
+.rec.rec-arrow:hover {
+  border-radius: 50%;
+  background-color: #325c8a !important;
+}
+.rec.rec-arrow:focus {
+  border-radius: 50%;
+  background-color: #325c8a !important;
+}
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+.rec .rec-dot_active {
+  box-shadow: 0 0 1px 3px #e6b52f;
+  background-color: transparent;
+}
+.rec .rec-dot_active:focus {
+  box-shadow: 0 0 1px 3px #e6b52f;
+  background-color: #ffffff;
+}
+.rec .rec-item-wrapper {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+.colorAvatar {
+  background-color: $blue1 !important;
+}
+
+.clients {
+  height: 75vh !important;
+  margin-left: 150px;
+  border-left: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  .clientsbox{
+    height: 68vh;
+    background-image: url(../img/fondooffice.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 10% 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .clientsHeader {
+      height: 15vh;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 3%;
+      margin-top: 2%;
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        color: #5437e2;
+        background-color: white;
+        padding: 15px 45px;
+        border-radius: 45px;
+        font-size: 28px;
+      }
+    }
+    .clientContent {
+      height: 45vh;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .clientCard {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .clientContentCarousel {
+        height: 20vh;
+        .carousel {
+          display: none !important;
+        }
+      }
+      .clientContentButtons {
+        height: 10vh;
+      }
+    }
+  }
+}
+/*  MEDIAS  */
+
+@media all and (min-width: 1200px) and (max-width: 1500px) {
+  .clients {
+    height: 80vh !important;
+    margin-left: 150px;
+    border-left: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .clientsbox{
+      height: 70vh;
+      .clientsHeader {
+        height: 15vh;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 3%;
+        margin-top: 2%;
+        h1 {
+          font-size: 25px;
+        }
+      }
+      .clientContent {
+        height: 45vh;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .clientCard {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .clientContentCarousel {
+          height: auto!important;
+          .carousel {
+            display: none !important;
+          }
+        }
+        .clientContentButtons {
+          margin-top: 1%;
+          height: 10vh;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1200px) {
+  .clients {
+    height: 80vh !important;
+    margin-left: 150px;
+    border-left: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .clientsbox{
+      height: 80vh;
+      .clientsHeader {
+        height: 13vh;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 3%;
+        margin-top: 2%;
+        h1 {
+          font-size: 23px;
+        }
+      }
+      .clientContent {
+        height: auto!important;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .clientCard {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .clientContentCarousel {
+          height: auto!important;
+          .carousel {
+            display: none !important;
+          }
+        }
+        .clientContentButtons {
+          margin-top: 5%;
+          height: 10vh;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 769px) and (max-width: 960px) {
+  .clients {
+    height: 100vh !important;
+    margin-left: 150px;
+    border-left: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .clientsbox{
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .clientsHeader {
+        height: 13vh;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-top: 0%;
+        h1 {
+          font-size: 23px;
+        }
+      }
+      .clientContent {
+        height: auto!important;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .clientCard {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .clientContentCarousel {
+          height: auto!important;
+          .carousel {
+            display: none !important;
+          }
+        }
+        .clientContentButtons {
+          margin-top: 5%;
+          height: 10vh;
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 600px) and (max-width: 768px) {
+  .clients {
+    height: 80vh !important;
+    margin-left: unset;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%!important;
+
+    .clientsbox{
+      height: 80vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .clientsHeader {
+        height: 13vh;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-top: 0%;
+        h1 {
+          font-size: 23px;
+        }
+      }
+      .clientContent {
+        height: auto!important;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .clientCard {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+        .clientContentCarousel {
+          height: auto!important;
+          .carousel {
+            display: none !important;
+          }
+        }
+        .clientContentButtons {
+          margin-top: 5%;
+          height: 10vh;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .clients {
+    height: 80vh;
+    margin-left: unset;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    .clientsbox{
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%!important;
+      background-position: 40% 50%;
+      .clientsHeader {
+        height: 15vh;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 3%;
+        margin-top: 2%;
+        h1 {
+          padding: 8px 10px!important;
+          border-radius: 45px;
+          box-shadow: 0 10px 22px rgba(#dca718, $alpha: .6)!important;
+          font-size: 18px;
+        }
+      }
+      .clientContent {
+        height: 45vh;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .clientCard {
+          margin-left: unset;
+          margin-right: unset;
+          display: none;
+        }
+        .clientContentCarousel {
+          height: auto!important;
+          .carousel {
+            display: flex !important;
+          }
+        }
+        .clientContentButtons {
+          height: 10vh;
+        }
+      }
+    }
+  }
+}

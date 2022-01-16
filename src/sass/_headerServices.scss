@@ -1,0 +1,86 @@
+/*  HEADER - SERVICES  */
+
+$blue1: #325c8a;
+$blue2: #316091;
+$yellow1: #fdbf14;
+
+.HeaderServices{
+    height: 100vh;
+    margin-left: 150px;
+    border-left: 1.5px solid white;
+    .titleServices{
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #3E907D;
+        background: -webkit-linear-gradient(to right, #325c8a, #3E907D);
+        background: linear-gradient(to right, #325c8a, #3E907D);
+        h1{
+            text-transform: uppercase;
+            font-weight: bolder;
+            font-size: 40px;
+            font-family: "Asap", sans-serif;
+            color: white;
+            letter-spacing: 3px;
+        }
+    }
+    .iconsServices{
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px!important;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .iconCard{
+            width: 110px;
+            margin-left: 4%;
+            margin-right: 4%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img{
+                width: 100%;
+                height: auto;
+                margin-top: 35px;
+            }
+            h2{
+                color: $blue1;
+                font-size: 16px;
+                margin-top: 4px;
+                text-align: center;
+                font-weight: 600;
+                font-family: "Asap", sans-serif;
+            }
+        }
+    }
+}
+
+/*  MEDIAS  */
+
+@media all and (min-width: 768px) and (max-width: 1500px) {
+    .HeaderServices{
+        height: auto!important;
+        .iconsServices{
+            height: auto!important;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .HeaderServices{
+        height: auto!important;
+        margin-left: unset;
+        border-left: none;
+        .titleServices{
+            display: none;
+        }
+        .iconsServices{
+            height: auto!important;
+            margin-bottom: 40px;
+        }
+    }
+}
