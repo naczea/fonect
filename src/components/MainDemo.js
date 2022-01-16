@@ -10,7 +10,7 @@ export default function MainServices() {
     return (
         <div className="MainDemo">
             <div className="titleMain">
-                <h1>Sigue los pasos para probar la DEMO!</h1>
+                <h1>Sigue los pasos para la DEMO!</h1>
             </div>
             <div className="contMain">
 
